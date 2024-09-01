@@ -1,4 +1,6 @@
-#include <THC/THC.h>
+#include <ATen/ATen.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <ATen/cuda/CUDAEvent.h>
 #include <math.h>
 #include <torch/extension.h>
 #include "roi_align_kernel.h"

@@ -1,4 +1,6 @@
-#include <THC/THC.h>
+#include <ATen/ATen.h>
+#include <ATen/cuda/CUDAContext.h>
+#include <ATen/cuda/CUDAEvent.h>
 #include <math.h>
 #include "rod_align_kernel.h"
 #include "rod_align_cuda.h"

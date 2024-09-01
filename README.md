@@ -1,3 +1,34 @@
+# auto-crop in 2024
+
+## Motivation for Forking This Repository
+
+I made modifications because the original repository did not work for several reasons. 
+As of the latest commit, I have confirmed that it works in the following environment.
+
+- torch: 2.4.0+cu121
+- cuda: 12.1
+- GPU: RTX3090
+
+## Setup
+
+```shell
+# colone repository
+git clone https://github.com/rskmoi/autocrop.git
+# install autocrop
+cd /path/to/autocrop
+python setup.py install
+```
+
+## Prepare Model
+
+Since the face detection model file cannot be downloaded due to  [410 error](https://github.com/hukkelas/DSFD-Pytorch-Inference/issues/36), please obtain RetinaFace_mobilenet025.pth from the following link.
+
+https://github.com/hukkelas/DSFD-Pytorch-Inference
+
+After cloning the repository and obtaining the .pth file, place it in `~/.cache/torch/hub/checkpoints/`.
+
+---
+
 # auto-crop
 
 Image auto crop toolbox. Supports image cropping with any aspect ratio, based on [face-detection](https://pypi.org/project/face-detection/) and [GAIC: Grid-Anchor-based-Image-Cropping-Pytorch](https://github.com/lld533/Grid-Anchor-based-Image-Cropping-Pytorch). 

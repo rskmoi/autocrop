@@ -22,7 +22,7 @@ class AutoCropper(object):
         self.cropper = build_crop_model(model=model, cuda=self.cuda, model_path=model_path)
         self.face_detector = None
         if use_face_detector:
-            self.face_detector = face_detection.build_detector("DSFDDetector",
+            self.face_detector = face_detection.build_detector("RetinaNetMobileNetV1",
                                                                confidence_threshold=0.5,
                                                                nms_iou_threshold=0.3)
         if self.cuda:
